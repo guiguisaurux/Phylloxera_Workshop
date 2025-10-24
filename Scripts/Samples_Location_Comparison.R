@@ -27,10 +27,11 @@ admin1_all <- rnaturalearth::ne_states(
 
 # Plot
 ggplot() +
-  geom_sf(data = admin1_all, fill = "black", color = "gray", size = 0.1) +
+  geom_sf(data = admin1_all, fill = "#201030", color = "gray", size = 0.1) +
   geom_sf(data = samples_sf, aes(color = ColID), size = 0.1,alpha = 0.5) +
-  scale_color_manual(values = c("green","blue")) +
-  scale_x_continuous(limits = c(-130, -60)) +
+  scale_color_manual(values = c("green","#0CC")) +
+  scale_x_continuous(limits = c(-120, -50)) +
+  scale_y_continuous(limits = c(25,50)) +
   theme_minimal() + 
   ggsave(filename = "C:/Users/User/OneDrive/Documents/Phylloxera_Workshop/Figures/samples_map.png", dpi = 600)
 
